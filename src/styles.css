@@ -1,3 +1,36 @@
+:root{
+    --main-bg-color: #54cca6;
+    --content-bg-color: #98d6d3;
+}
+
 *{
-    background-color: green;
+
+    /* background-color: gray; */
+}
+
+body{
+    background-color: var(--main-bg-color);
+}
+
+#LayoutContainer{
+    width: 90vw;
+    height: 90vh;
+    margin: auto;
+    margin-top: 5vh;
+    background-color: var(--content-bg-color);
+    display: flex;
+}
+
+#SidebarContainer{
+    /* background-color: blue; */
+    background-color: var(--main-bg-color);
+    width: 20%;
+    height: 80%;
+    margin: auto;
+    flex: 1;
+}
+
+#ContentContainer{
+    /* background-color: yellow; */
+    flex: 3;
 }
