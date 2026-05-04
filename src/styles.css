@@ -5,7 +5,10 @@
 
 *{
 
-    /* background-color: gray; */
+}
+
+header{
+    text-align: center;
 }
 
 body{
@@ -13,24 +16,23 @@ body{
 }
 
 #LayoutContainer{
-    width: 90vw;
-    height: 90vh;
-    margin: auto;
-    margin-top: 5vh;
     background-color: var(--content-bg-color);
+    min-height: 70vh;
+    margin: 3ch;
+    border-radius: 5ch;
+
     display: flex;
 }
 
-#SidebarContainer{
-    /* background-color: blue; */
-    background-color: var(--main-bg-color);
-    width: 20%;
-    height: 80%;
-    margin: auto;
+#SideBarContainer{
     flex: 1;
+    background-color: var(--main-bg-color);
+    margin: 3ch;
+    border-radius: 3ch;
+    
 }
 
 #ContentContainer{
+    flex: 2;
     /* background-color: yellow; */
-    flex: 3;
 }
