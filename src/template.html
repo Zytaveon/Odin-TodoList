@@ -11,6 +11,19 @@
     </header>
 
     <body>
+
+        <!-- Forms -->
+        <dialog id = "NewProjectDialog">
+            <form id = "NewProjectForm">
+            </form>
+        </dialog>
+
+        <dialog id = "NewTaskDialog">
+            <form id = "NewTaskForm">
+            </form>
+        </dialog>
+
+        <!-- Content Layout -->
         <div id = "LayoutContainer">
             <div id = "SideBarContainer">
                 <h3>Projects</h3>
@@ -21,8 +34,11 @@
             <div id = "ContentContainer">
                 <h3>Tasks</h3>
                 <button id = "NewTaskButton">New Task</button>
+                <div if = "TaskContainer">
+                </div>
             </div>
         </div>
+
     </body>
 </html>
 
