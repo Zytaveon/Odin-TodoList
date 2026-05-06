@@ -26,6 +26,28 @@ body{
     background-color: var(--main-bg-color);
 }
 
+.FormWrapper{
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin: 2ch;
+    border-radius: 5ch;
+    background-color: yellow;
+}
+
+.FormDialog{
+    position:fixed;
+    width: 80vh;
+    height: 80vh;
+    margin: auto;
+    /* text-align: center; */
+    /* justify-content: center; */
+    align-items: center;
+    border: transparent;
+    background-color: grey;
+    border-radius: 5ch;
+}
+
 #LayoutContainer{
     background-color: var(--content-bg-color);
     min-height: 70vh;

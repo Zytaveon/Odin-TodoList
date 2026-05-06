@@ -13,14 +13,29 @@
     <body>
 
         <!-- Forms -->
-        <dialog id = "NewProjectDialog">
-            <form id = "NewProjectForm">
-            </form>
+        <dialog id = "NewProjectDialog" class = "FormDialog">
+            <div class = "FormWrapper">
+                <form id = "NewProjectForm">
+                    <h3>Add New Project</h3>
+                    <div class = "formLine">
+                        <label for = "ProjectName">Project Name: </label>
+                        <input type = "text" id = "ProjectName" name = "ProjectName" required>
+                    </div>
+                    <div class = "formLine">
+                        <label for = "ProjectDescription">Project Description:</label>
+                        <input type = "text" id = "ProjectDescription" name = "ProjectName" required>
+                    </div>
+                    <button type = "submit">Add Project</button>
+                    <button>Close</button>
+                </form>
+            </div>
         </dialog>
 
-        <dialog id = "NewTaskDialog">
-            <form id = "NewTaskForm">
-            </form>
+        <dialog id = "NewTaskDialog" class = "FormDialog">
+            <div class = "FormWrapper">
+                <form id = "NewTaskForm">
+                </form>
+            </div>
         </dialog>
 
         <!-- Content Layout -->
