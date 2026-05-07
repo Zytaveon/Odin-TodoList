@@ -59,6 +59,13 @@ export default class UI{
         this.taskButtonHidden = false;
     }
 
+    getFormInfo(){
+        return{
+            name: this.ProjectFormName.value,
+            description: this.ProjectFormDescription.value
+        }
+    }
+
     displayProjects(projectList){
         this.projectContainer.replaceChildren()
         projectList.forEach((project) => {

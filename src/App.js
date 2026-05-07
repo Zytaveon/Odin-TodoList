@@ -28,9 +28,10 @@ export default class App{
 
     bindProjectFormSubmitButton(){
         this.UI.bindProjectFormSubmitButton(() => {
-            this.UI.submitProjectForm()
-            this.project.push(new Project(this.UI.getFormInfo()))
+            // this.UI.submitProjectForm()
+            this.projects.push(new project(this.UI.getFormInfo()))
             this.UI.closeProjectDialog()
+            this.UI.displayProjects(this.projects)
         })
     }
 
