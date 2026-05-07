@@ -10,6 +10,7 @@ export default class App{
         this.bindNewProjectButton()
         this.bindCloseProjectButton()
         this.bindNewTaskButton()
+        this.bindProjectFormSubmitButton()
         this.projects = [];
     }
 
@@ -25,13 +26,25 @@ export default class App{
         })
     }
 
+    bindProjectFormSubmitButton(){
+        this.UI.bindProjectFormSubmitButton(() => {
+            this.UI.submitProjectForm()
+            this.project.push(new Project(this.UI.getFormInfo()))
+            this.UI.closeProjectDialog()
+        })
+    }
+
     bindNewTaskButton(){
         this.UI.bindNewTaskButton(() => {
             console.log("Hello from the task button!")
         })
     }
 
+    bindCloseTaskButton(){
+        console.log("Shouldn't see this yet")
+    }
+
     showTaskButton(){
-        this.UT.showTaskButton()
+        this.UI.showTaskButton()
     }
 };
