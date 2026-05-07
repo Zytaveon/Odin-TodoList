@@ -7,19 +7,26 @@ export default class App{
         this.UI = new ui()
         // this.PROJECT = new project()
         // this.TASK = new task()
-        this.bindProjectButton()
-        this.bindTaskButton()
+        this.bindNewProjectButton()
+        this.bindCloseProjectButton()
+        this.bindNewTaskButton()
         this.projects = [];
     }
 
-    bindProjectButton(){
-        this.UI.bindProjectButton(() => {
+    bindNewProjectButton(){
+        this.UI.bindNewProjectButton(() => {
             this.UI.openProjectDialog()
         })
     }
 
-    bindTaskButton(){
-        this.UI.bindTaskButton(() => {
+    bindCloseProjectButton(){
+        this.UI.bindProjectFormCloseButton(() => {
+            this.UI.closeProjectDialog()
+        })
+    }
+
+    bindNewTaskButton(){
+        this.UI.bindNewTaskButton(() => {
             console.log("Hello from the task button!")
         })
     }

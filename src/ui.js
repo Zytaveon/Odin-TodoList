@@ -1,27 +1,32 @@
 
 export default class UI{
     constructor(){
-        this.addTaskButton      = document.querySelector("#NewTaskButton")
-        this.addProjectButton   = document.querySelector("#NewProjectButton")
+
+        //Project Objects
         this.projectContainer   = document.querySelector("#ProjectContainer")
-        this.taskContainer      = document.querySelector("#TaskContainer")
         this.NewProjectDialog   = document.querySelector("#NewProjectDialog")
         this.NewProjectForm     = document.querySelector("#NewProjectForm")
+
+        this.addProjectButton   = document.querySelector("#NewProjectButton")
+        this.ProjectFormCloseButton = document.querySelector("#ProjectFormCloseButton")
+
+        //Task Objects
+        this.taskContainer      = document.querySelector("#TaskContainer")
         this.NewTaskDialog      = document.querySelector("#NewTaskDialog")
         this.NewTaskForm        = document.querySelector("#NewTaskForm")
 
+        this.addTaskButton      = document.querySelector("#NewTaskButton")
+
         this.addTaskButton.hidden = true
         this.taskButtonHidden = true
+
+        this.bindProjectFormCloseButton()
     }
     
-
-    bindProjectButton(func){
-        this.addProjectButton.addEventListener("click", func)
-    }
-
-    bindTaskButton(func){
-        this.addTaskButton.addEventListener("click", func)
-    }
+    //Button Binds
+    bindNewProjectButton(func){this.addProjectButton.addEventListener("click", func)}
+    bindNewTaskButton(func){this.addTaskButton.addEventListener("click", func)}
+    bindProjectFormCloseButton(func){this.ProjectFormCloseButton.addEventListener("click", func)}
 
     displayProjects(projectList){
         this.projectContainer.replaceChildren()
@@ -33,20 +38,17 @@ export default class UI{
         })
     }
 
-    taskButtonHidden(){
-        return taskButtonHidden
-    }
+    taskButtonHidden(){return taskButtonHidden}
 
     showTaskButton(){
         this.addTaskButton.hidden = false;
         this.taskButtonHidden = false;
     }
 
-    openProjectDialog(){
-        this.NewProjectDialog.showModal()
-    }
+    openProjectDialog(){this.NewProjectDialog.showModal()}
+    closeProjectDialog(){this.NewProjectDialog.close()}
+    
 
-    openTaskDialog(){
-        this.NewTaskDialog.showModal()
-    }
+    openTaskDialog(){this.NewTaskDialog.showModal()}
+    closeTaskDialog(){this.NewTaskDialog.close()}
 };
