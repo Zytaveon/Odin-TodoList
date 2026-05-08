@@ -75,6 +75,10 @@ export default class UI{
             const projectCard = document.createElement("div")
             projectCard.classList.add("projectCard")
 
+            if(project.active){
+                projectCard.classList.add("projectCard_active")
+            }
+
             const projectCardTitle = document.createElement("div")
             projectCardTitle.textContent = project.name
             projectCardTitle.classList.add("projectCardTitle")

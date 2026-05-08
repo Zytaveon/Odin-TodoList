@@ -2,6 +2,7 @@
     --main-bg-color: #54cca6;
     --content-bg-color: #98d6d3;
     --accent-bg-color: #ebe581;
+    --active-bg-color: #f084a4;
 }
 
 *{
@@ -74,6 +75,10 @@ body{
     margin: auto;
     margin-top: 1.25ch;
     margin-bottom: 1.25ch;
+}
+
+.projectCard_active{
+    background-color: var(--active-bg-color);
 }
 
 .projectCardTitle{

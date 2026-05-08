@@ -12,6 +12,7 @@ export default class App{
         this.bindNewTaskButton()
         this.bindProjectFormSubmitButton()
         this.projects = [];
+        this.currentProject = undefined
     }
 
     bindNewProjectButton(){
@@ -28,8 +29,18 @@ export default class App{
 
     bindProjectFormSubmitButton(){
         this.UI.bindProjectFormSubmitButton(() => {
-            // this.UI.submitProjectForm()
-            this.projects.push(new project(this.UI.getFormInfo()))
+            const newProject = new project(this.UI.getFormInfo())
+
+            if(this.currentProject === undefined ){this.UI.showTaskButton()}
+
+            if(this.currentProject !== undefined ){
+                console.log("Current Project wasn't empty")
+                this.currentProject.removeActive()
+                this.UI.showTaskButton()
+            }
+
+            this.currentProject = newProject;   
+            this.projects.push(newProject)
             this.UI.closeProjectDialog()
             this.UI.displayProjects(this.projects)
         })
