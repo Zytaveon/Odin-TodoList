@@ -1,6 +1,7 @@
 :root{
     --main-bg-color: #54cca6;
     --content-bg-color: #98d6d3;
+    --accent-bg-color: #ebe581;
 }
 
 *{
@@ -40,7 +41,7 @@ body{
     border: transparent;
     background-color: var(--main-bg-color);
     border-radius: 5ch;
-    outline: 2ch solid yellow;
+    outline: 2ch solid var(--accent-bg-color);
 }
 
 #LayoutContainer{
@@ -59,6 +60,28 @@ body{
     border-radius: 3ch;
     text-align: center;
     /* outline: 2px solid red; */
+}
+
+/* #projectContainer{ */
+/*     text-align: center; */
+/* } */
+
+.projectCard{
+    text-align: left;
+    background-color: var(--accent-bg-color);
+    width: 90%;
+    border-radius: 1ch;
+    margin: auto;
+    margin-top: 1.25ch;
+    margin-bottom: 1.25ch;
+}
+
+.projectCardTitle{
+    font-size: 3ch;
+}
+
+.projectCardDescription{
+    font-size: 2ch;
 }
 
 #ContentContainer{

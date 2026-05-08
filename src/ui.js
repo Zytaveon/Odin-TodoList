@@ -69,10 +69,23 @@ export default class UI{
     displayProjects(projectList){
         this.projectContainer.replaceChildren()
         projectList.forEach((project) => {
+
+            console.log(project)
             
-            const projectElement = document.createElement("div")
-            projectElement.textContent = project.name
-            this.projectContainer.appendChild(projectElement)
+            const projectCard = document.createElement("div")
+            projectCard.classList.add("projectCard")
+
+            const projectCardTitle = document.createElement("div")
+            projectCardTitle.textContent = project.name
+            projectCardTitle.classList.add("projectCardTitle")
+            projectCard.appendChild(projectCardTitle)
+
+            const projectCardDescription = document.createElement("div")
+            projectCardDescription.textContent = project.description
+            projectCardDescription.classList.add("projectCardDescription")
+            projectCard.appendChild(projectCardDescription)
+
+            this.projectContainer.appendChild(projectCard)
         })
     }
 
